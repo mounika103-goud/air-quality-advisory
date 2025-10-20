@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Air Quality Advisory — Live App</title>
+    <meta http-equiv="refresh" content="0; url=#" id="redirectMeta" />
+    <style>
+      body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#f7f9fb; color:#0f172a; margin:0; padding:0 }
+      .container { max-width:900px; margin:48px auto; background:white; padding:28px; border-radius:8px; box-shadow:0 8px 24px rgba(15,23,42,.08)}
+      h1 { margin-top:0 }
+      .hero { display:flex; gap:20px; align-items:center }
+      .btn { display:inline-block; background:#ff4b4b; color:white; padding:10px 16px; border-radius:6px; text-decoration:none }
+      .muted { color:#475569 }
+      .notice { background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; margin:12px 0 }
+      .linkbox { margin-top:18px }
+      pre { background:#0f172a; color:#f8fafc; padding:12px; border-radius:6px; overflow:auto }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <div>
+          <h1>Air Quality Advisory — Live app</h1>
+          <p class="muted">This repository contains an interactive Streamlit app. GitHub Pages only serves static files (HTML/CSS/JS) and cannot run Python/Streamlit apps directly.</p>
+        </div>
+      </div>
+
+      <div class="notice">
+        <strong>Why you see the README:</strong>
+        <p class="muted">GitHub Pages is serving the repository as a static site. To run the interactive Streamlit app you must deploy it to a platform that runs Python (for example, Streamlit Community Cloud, Render, Heroku, or Railway).</p>
+      </div>
+
+      <h3>Quick options</h3>
+      <ol>
+        <li><strong>Deploy to Streamlit Community Cloud (recommended):</strong> Connect this GitHub repository at <a href="https://share.streamlit.io/">share.streamlit.io</a> and set the main file to <code>streamlit_app.py</code>. Streamlit Cloud will run the app and give you a public URL.</li>
+        <li><strong>Deploy to Render / Heroku / Railway:</strong> Use the <code>streamlit_app.py</code> start command: <code>streamlit run streamlit_app.py --server.port $PORT</code>. Add a <code>Procfile</code> or service command accordingly.</li>
+      </ol>
+
+      <p>If you already deployed the Streamlit app, paste its public URL below and this page will redirect visitors to the live app. (Or send me the URL and I'll update the repo for you.)</p>
+
+      <div class="linkbox">
+        <label for="appUrl">Deployed Streamlit app URL (example: https://share.streamlit.io/username/repo/main/streamlit_app.py):</label>
+        <pre id="appUrl">PASTE_YOUR_STREAMLIT_URL_HERE</pre>
+        <p class="muted">After deploying, edit this file and replace <code>PASTE_YOUR_STREAMLIT_URL_HERE</code> with your app URL. Optionally I can update it for you — paste the URL in chat and I'll commit the change.</p>
+      </div>
+
+      <p style="margin-top:18px">
+        <a class="btn" href="https://share.streamlit.io/">Deploy to Streamlit</a>
+        <a style="margin-left:12px;" href="https://github.com/mounika103-goud/air-quality-advisory" target="_blank">Repository</a>
+      </p>
+
+      <hr />
+      <p class="muted">Need help deploying? Reply here with the platform you want to use and I'll provide step-by-step instructions and can update this page to redirect to the live app URL.</p>
+    </div>
+
+    <script>
+      // If user has already replaced the placeholder with a valid URL, redirect automatically.
+      (function(){
+        var el = document.getElementById('appUrl');
+        var url = el && el.textContent && el.textContent.trim();
+        if (url && url !== 'PASTE_YOUR_STREAMLIT_URL_HERE' && url.startsWith('http')) {
+          // redirect after short delay
+          setTimeout(function(){ window.location.href = url; }, 700);
+        }
+      })();
+    </script>
+  </body>
+</html>
